@@ -7,7 +7,7 @@ inputs:
   pr-title-regex:
     description: "You can override the regex that is used to match PR title "
     required: false
-    default: "^(.+)(?:(([^)s]+)))?: (.+)"
+    default: "^(revert: )?(feat|fix|docs|style|refactor|perf|test|chore|ci)(\(.+\))?: ([A-Z0-9].{1,49})"
   pr-body-regex:
     description: "You can override the regex that is used to match PR body "
     required: false
