@@ -1,5 +1,7 @@
 name: PR
 on:
+  check_run:
+    branches: [master]
   pull_request:
     branches: [master]
     types: [opened, reopened, edited, synchronize]
