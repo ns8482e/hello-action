@@ -14,3 +14,6 @@ jobs:
       - name: cc-by-pr
         id: cc-by-pr
         uses: ns8482e/hello-action/actions/ccbypr@v5
+      - name: conventional-pr-title
+        uses: aslafy-z/conventional-pr-title-action@v2.2.0
+
