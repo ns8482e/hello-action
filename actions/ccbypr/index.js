@@ -2,6 +2,7 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 import { validatePR } from "./ccc";
 
+async function run() {
 try {
 
   const contextPullRequest = github.context.payload.pull_request;
@@ -65,3 +66,6 @@ try {
 } catch (error) {
   core.setFailed(error.message);
 }
+};
+
+run().catch(error);
