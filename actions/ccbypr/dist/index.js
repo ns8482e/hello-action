@@ -72,7 +72,7 @@ try {
   const prTitleRegexPattern = core.getInput("pr-title-regex");
   const prBodyRegexPattern = core.getInput("pr-body-regex");
 
-  const client = new github.GitHub(process.env.GITHUB_TOKEN);
+  const client = new github.getOctokit(process.env.GITHUB_TOKEN);
 
   const owner = contextPullRequest.base.user.login;
   const repo = contextPullRequest.base.repo.name;
@@ -127,7 +127,7 @@ try {
 }
 };
 
-run().catch(error);
+run().catch(console.error);
 
 /***/ }),
 
