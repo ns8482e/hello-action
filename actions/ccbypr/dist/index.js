@@ -127,7 +127,8 @@ try {
 }
 };
 
-run().catch(error);
+run().catch(console.error);
+
 
 /***/ }),
 
