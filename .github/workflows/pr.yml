@@ -17,6 +17,6 @@ jobs:
         with:
           success-msg:  The PR follows conventional commit
           fail-msg: The PR doesn't follow conventional commit 
-          cc-by-pr-title: PR/cc-by-pr
+          cc-by-pr-title: Conventional Commit
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
