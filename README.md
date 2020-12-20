@@ -31,6 +31,6 @@ This action validates PR Title.
 
 - name: cc-by-pr
         id: cc-by-pr
-        uses: ns8482e/hello-action/actions/ccbypr@v5
+        uses: ns8482e/hello-action/actions/ccbypr@v15
 
 Updated read me
