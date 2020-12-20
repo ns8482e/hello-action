@@ -78,6 +78,9 @@ try {
   const repo = contextPullRequest.base.repo.name;
 
   const contextName = core.getInput('cc-by-pr-title');
+  const successMsg =  core.getInput('success-msg');
+  const failMsg =  core.getInput('fail-msg');
+  
 
   let result = null;
   let error = null;
@@ -98,21 +101,23 @@ try {
   console.log(result.message);
 
   let state = 'success';
+  let description = '';
+
   if(result && result.status === "success"){
 
     console.log('in success');
 
     core.setOutput('success',true);
-
     state = 'success';
+    description = successMsg;
   }
   else{
     console.log('in failure');
     core.setOutput('success',false);
-    state = 'failure';
+    state = 'failure';failMsg
+    description = failMsg;
   }
 
-  let description = result.message;
   
   await client.request(
     'POST /repos/:owner/:repo/statuses/:sha',
