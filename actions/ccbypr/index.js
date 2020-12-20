@@ -50,6 +50,8 @@ try {
     core.setOutput('success',false);
     state = 'failure';
   }
+
+  let description = result.message;
   
   await client.request(
     'POST /repos/:owner/:repo/statuses/:sha',
