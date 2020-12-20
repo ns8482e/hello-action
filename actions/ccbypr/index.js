@@ -31,15 +31,22 @@ try {
   }catch(err){
     error = err;
   }
-  
+
+  console.log(result.status);
+
   console.log(result.message);
 
   let state = 'success';
   if(result && result.status === "success"){
+
+    console.log('in success');
+
     core.setOutput('success',true);
+
     state = 'success';
   }
   else{
+    console.log('in failure');
     core.setOutput('success',false);
     state = 'failure';
   }
@@ -56,6 +63,8 @@ try {
       context: contextName,
     },
   );
+
+  console.log('error is' + error);
 
   if (error) {
     throw error;
