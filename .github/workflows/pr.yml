@@ -14,3 +14,5 @@ jobs:
       - name: cc-by-pr
         id: cc-by-pr
         uses: ns8482e/hello-action/actions/ccbypr@v10
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
