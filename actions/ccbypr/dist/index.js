@@ -77,6 +77,8 @@ try {
   const owner = contextPullRequest.base.user.login;
   const repo = contextPullRequest.base.repo.name;
 
+  const contextName = core.getInput('cc-by-pr-title');
+
   let result = null;
   let error = null;
   try{
