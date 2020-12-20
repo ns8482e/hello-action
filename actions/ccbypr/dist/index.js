@@ -114,10 +114,10 @@ try {
   else{
     console.log('in failure');
     core.setOutput('success',false);
-    state = 'failure';failMsg
+    state = 'failure';
     description = failMsg;
   }
-  
+
 
   
   await client.request(
