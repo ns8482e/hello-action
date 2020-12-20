@@ -19,9 +19,9 @@ try {
   const repo = contextPullRequest.base.repo.name;
 
   const contextName = core.getInput('cc-by-pr-title');
+
   const successMsg =  core.getInput('success-msg');
   const failMsg =  core.getInput('fail-msg');
-  
 
   let result = null;
   let error = null;
@@ -58,6 +58,7 @@ try {
     state = 'failure';failMsg
     description = failMsg;
   }
+  
 
   
   await client.request(

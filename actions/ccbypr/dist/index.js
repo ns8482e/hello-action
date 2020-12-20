@@ -78,9 +78,12 @@ try {
   const repo = contextPullRequest.base.repo.name;
 
   const contextName = core.getInput('cc-by-pr-title');
+<<<<<<< HEAD
   const successMsg =  core.getInput('success-msg');
   const failMsg =  core.getInput('fail-msg');
   
+=======
+>>>>>>> 78d053551fce24a0889a12898b7432d5d93bccfb
 
   let result = null;
   let error = null;
