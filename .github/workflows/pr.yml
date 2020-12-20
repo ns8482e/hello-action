@@ -13,4 +13,10 @@ jobs:
         uses: actions/checkout@v2
       - name: cc-by-pr
         id: cc-by-pr
-        uses: ns8482e/hello-action/actions/ccbypr@v5
+        uses: ns8482e/hello-action/actions/ccbypr@v15
+        with:
+          success-msg:  The PR follows conventional commit
+          fail-msg: The PR doesn't follow conventional commit 
+          cc-by-pr-title: Conventional Commit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
