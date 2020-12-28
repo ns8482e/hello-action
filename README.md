@@ -33,5 +33,7 @@ This action validates PR Title.
 - name: cc-by-pr
         id: cc-by-pr
         uses: ns8482e/hello-action/actions/ccbypr@v15
+        with:
+          env : {{ Secure }}
 
 Updated read me
